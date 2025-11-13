@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-9a92dd34b6a721f33c1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fake_camera_driver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fake_camera_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fake_camera_driver_uninstall-36299ca213cb646815f2.json",
+					"name" : "fake_camera_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fake_camera_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fake_camera_node-6239f86a84d14bc1bd63.json",
+					"name" : "fake_camera_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ec58d7bbb1d3e8999224.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver",
+		"source" : "/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

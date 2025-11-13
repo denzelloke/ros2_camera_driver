@@ -1,0 +1,170 @@
+[0.000000] (-) TimerEvent: {}
+[0.000742] (fake_camera_driver) JobQueued: {'identifier': 'fake_camera_driver', 'dependencies': OrderedDict()}
+[0.001300] (fake_camera_driver) JobStarted: {'identifier': 'fake_camera_driver'}
+[0.016562] (fake_camera_driver) JobProgress: {'identifier': 'fake_camera_driver', 'progress': 'cmake'}
+[0.018034] (fake_camera_driver) JobProgress: {'identifier': 'fake_camera_driver', 'progress': 'build'}
+[0.019263] (fake_camera_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver', '--', '-j8', '-l8'], 'cwd': '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bx-orin'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/bx-orin'), ('OLDPWD', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'bx-orin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bx-orin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda-12.6/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/bx-orin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2457,unix/ubuntu:/tmp/.ICE-unix/2457'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/98f7a934_d492_4c14_b3bd_db455121ecd7'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver:/opt/ros/humble')]), 'shell': False}
+[0.099301] (-) TimerEvent: {}
+[0.101147] (fake_camera_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target fake_camera_node\x1b[0m\n'}
+[0.147846] (fake_camera_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/fake_camera_node.dir/src/fake_camera_node.cpp.o\x1b[0m\n'}
+[0.199549] (-) TimerEvent: {}
+[0.300837] (-) TimerEvent: {}
+[0.401697] (-) TimerEvent: {}
+[0.502518] (-) TimerEvent: {}
+[0.603366] (-) TimerEvent: {}
+[0.704147] (-) TimerEvent: {}
+[0.804981] (-) TimerEvent: {}
+[0.905809] (-) TimerEvent: {}
+[1.006659] (-) TimerEvent: {}
+[1.107545] (-) TimerEvent: {}
+[1.208380] (-) TimerEvent: {}
+[1.309236] (-) TimerEvent: {}
+[1.410086] (-) TimerEvent: {}
+[1.510912] (-) TimerEvent: {}
+[1.611769] (-) TimerEvent: {}
+[1.712622] (-) TimerEvent: {}
+[1.813445] (-) TimerEvent: {}
+[1.914272] (-) TimerEvent: {}
+[2.015088] (-) TimerEvent: {}
+[2.115976] (-) TimerEvent: {}
+[2.216796] (-) TimerEvent: {}
+[2.317624] (-) TimerEvent: {}
+[2.418493] (-) TimerEvent: {}
+[2.519303] (-) TimerEvent: {}
+[2.620138] (-) TimerEvent: {}
+[2.720985] (-) TimerEvent: {}
+[2.821826] (-) TimerEvent: {}
+[2.922650] (-) TimerEvent: {}
+[3.023567] (-) TimerEvent: {}
+[3.124425] (-) TimerEvent: {}
+[3.225282] (-) TimerEvent: {}
+[3.326105] (-) TimerEvent: {}
+[3.426840] (-) TimerEvent: {}
+[3.527650] (-) TimerEvent: {}
+[3.628332] (-) TimerEvent: {}
+[3.729130] (-) TimerEvent: {}
+[3.829946] (-) TimerEvent: {}
+[3.930709] (-) TimerEvent: {}
+[4.031414] (-) TimerEvent: {}
+[4.132279] (-) TimerEvent: {}
+[4.233105] (-) TimerEvent: {}
+[4.333960] (-) TimerEvent: {}
+[4.434777] (-) TimerEvent: {}
+[4.535483] (-) TimerEvent: {}
+[4.636409] (-) TimerEvent: {}
+[4.737233] (-) TimerEvent: {}
+[4.838061] (-) TimerEvent: {}
+[4.938887] (-) TimerEvent: {}
+[5.039717] (-) TimerEvent: {}
+[5.140539] (-) TimerEvent: {}
+[5.241353] (-) TimerEvent: {}
+[5.342160] (-) TimerEvent: {}
+[5.442977] (-) TimerEvent: {}
+[5.543853] (-) TimerEvent: {}
+[5.644681] (-) TimerEvent: {}
+[5.745496] (-) TimerEvent: {}
+[5.846328] (-) TimerEvent: {}
+[5.947147] (-) TimerEvent: {}
+[6.048016] (-) TimerEvent: {}
+[6.148852] (-) TimerEvent: {}
+[6.249703] (-) TimerEvent: {}
+[6.350533] (-) TimerEvent: {}
+[6.451360] (-) TimerEvent: {}
+[6.552192] (-) TimerEvent: {}
+[6.652975] (-) TimerEvent: {}
+[6.753761] (-) TimerEvent: {}
+[6.854590] (-) TimerEvent: {}
+[6.955439] (-) TimerEvent: {}
+[7.056303] (-) TimerEvent: {}
+[7.157115] (-) TimerEvent: {}
+[7.257927] (-) TimerEvent: {}
+[7.358772] (-) TimerEvent: {}
+[7.459650] (-) TimerEvent: {}
+[7.560496] (-) TimerEvent: {}
+[7.661294] (-) TimerEvent: {}
+[7.762097] (-) TimerEvent: {}
+[7.862910] (-) TimerEvent: {}
+[7.963748] (-) TimerEvent: {}
+[8.064555] (-) TimerEvent: {}
+[8.165338] (-) TimerEvent: {}
+[8.266142] (-) TimerEvent: {}
+[8.366960] (-) TimerEvent: {}
+[8.467821] (-) TimerEvent: {}
+[8.568660] (-) TimerEvent: {}
+[8.669489] (-) TimerEvent: {}
+[8.770343] (-) TimerEvent: {}
+[8.871184] (-) TimerEvent: {}
+[8.972030] (-) TimerEvent: {}
+[9.072848] (-) TimerEvent: {}
+[9.173850] (-) TimerEvent: {}
+[9.274752] (-) TimerEvent: {}
+[9.375809] (-) TimerEvent: {}
+[9.476685] (-) TimerEvent: {}
+[9.577614] (-) TimerEvent: {}
+[9.678527] (-) TimerEvent: {}
+[9.779353] (-) TimerEvent: {}
+[9.880406] (-) TimerEvent: {}
+[9.981233] (-) TimerEvent: {}
+[10.082265] (-) TimerEvent: {}
+[10.183082] (-) TimerEvent: {}
+[10.284103] (-) TimerEvent: {}
+[10.384872] (-) TimerEvent: {}
+[10.485674] (-) TimerEvent: {}
+[10.586499] (-) TimerEvent: {}
+[10.687291] (-) TimerEvent: {}
+[10.788092] (-) TimerEvent: {}
+[10.888869] (-) TimerEvent: {}
+[10.989670] (-) TimerEvent: {}
+[11.090466] (-) TimerEvent: {}
+[11.191280] (-) TimerEvent: {}
+[11.292118] (-) TimerEvent: {}
+[11.392876] (-) TimerEvent: {}
+[11.493686] (-) TimerEvent: {}
+[11.594505] (-) TimerEvent: {}
+[11.695300] (-) TimerEvent: {}
+[11.796128] (-) TimerEvent: {}
+[11.896907] (-) TimerEvent: {}
+[11.997611] (-) TimerEvent: {}
+[12.098335] (-) TimerEvent: {}
+[12.199030] (-) TimerEvent: {}
+[12.249371] (fake_camera_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable fake_camera_node\x1b[0m\n'}
+[12.299222] (-) TimerEvent: {}
+[12.400053] (-) TimerEvent: {}
+[12.484001] (fake_camera_driver) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.4.5\n'}
+[12.484933] (fake_camera_driver) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.4.5\n'}
+[12.485832] (fake_camera_driver) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.4.5\n'}
+[12.500159] (-) TimerEvent: {}
+[12.600808] (-) TimerEvent: {}
+[12.701554] (-) TimerEvent: {}
+[12.802462] (-) TimerEvent: {}
+[12.903289] (-) TimerEvent: {}
+[13.004135] (-) TimerEvent: {}
+[13.104957] (-) TimerEvent: {}
+[13.205776] (-) TimerEvent: {}
+[13.277713] (fake_camera_driver) StdoutLine: {'line': b'[100%] Built target fake_camera_node\n'}
+[13.304688] (fake_camera_driver) CommandEnded: {'returncode': 0}
+[13.305983] (-) TimerEvent: {}
+[13.307368] (fake_camera_driver) JobProgress: {'identifier': 'fake_camera_driver', 'progress': 'install'}
+[13.329217] (fake_camera_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver'], 'cwd': '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bx-orin'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/bx-orin'), ('OLDPWD', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'bx-orin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bx-orin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda-12.6/bin:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/bx-orin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2457,unix/ubuntu:/tmp/.ICE-unix/2457'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/98f7a934_d492_4c14_b3bd_db455121ecd7'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver:/opt/ros/humble')]), 'shell': False}
+[13.347336] (fake_camera_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.348007] (fake_camera_driver) StdoutLine: {'line': b'-- Installing: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/lib/fake_camera_driver/fake_camera_node\n'}
+[13.350960] (fake_camera_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/lib/fake_camera_driver/fake_camera_node" to ""\n'}
+[13.351346] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/ament_index/resource_index/package_run_dependencies/fake_camera_driver\n'}
+[13.351839] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/ament_index/resource_index/parent_prefix_path/fake_camera_driver\n'}
+[13.352266] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/ament_prefix_path.sh\n'}
+[13.352589] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/ament_prefix_path.dsv\n'}
+[13.352994] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/path.sh\n'}
+[13.353249] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/path.dsv\n'}
+[13.353489] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.bash\n'}
+[13.353725] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.sh\n'}
+[13.353959] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.zsh\n'}
+[13.354190] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.dsv\n'}
+[13.354435] (fake_camera_driver) StdoutLine: {'line': b'-- Installing: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/package.dsv\n'}
+[13.354666] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/ament_index/resource_index/packages/fake_camera_driver\n'}
+[13.354933] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/cmake/fake_camera_driverConfig.cmake\n'}
+[13.355169] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/cmake/fake_camera_driverConfig-version.cmake\n'}
+[13.355534] (fake_camera_driver) StdoutLine: {'line': b'-- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/package.xml\n'}
+[13.357986] (fake_camera_driver) CommandEnded: {'returncode': 0}
+[13.406406] (-) TimerEvent: {}
+[13.412672] (fake_camera_driver) JobEnded: {'identifier': 'fake_camera_driver', 'rc': 0}
+[13.415173] (-) EventReactorShutdown: {}

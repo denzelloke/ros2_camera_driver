@@ -1,0 +1,29 @@
+[0.018s] Invoking command in '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver -- -j8 -l8
+[0.101s] [35m[1mConsolidate compiler generated dependencies of target fake_camera_node[0m
+[0.140s] [ 50%] [32mBuilding CXX object CMakeFiles/fake_camera_node.dir/src/fake_camera_node.cpp.o[0m
+[12.125s] [100%] [32m[1mLinking CXX executable fake_camera_node[0m
+[12.338s] /usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.4.5
+[12.339s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.4.5
+[12.340s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.4.5
+[13.113s] [100%] Built target fake_camera_node
+[13.143s] Invoked command in '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver -- -j8 -l8
+[13.165s] Invoking command in '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver
+[13.186s] -- Install configuration: ""
+[13.187s] -- Installing: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/lib/fake_camera_driver/fake_camera_node
+[13.189s] -- Set runtime path of "/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/lib/fake_camera_driver/fake_camera_node" to ""
+[13.190s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/ament_index/resource_index/package_run_dependencies/fake_camera_driver
+[13.191s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/ament_index/resource_index/parent_prefix_path/fake_camera_driver
+[13.191s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/ament_prefix_path.sh
+[13.191s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/ament_prefix_path.dsv
+[13.192s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/path.sh
+[13.192s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/environment/path.dsv
+[13.192s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.bash
+[13.192s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.sh
+[13.193s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.zsh
+[13.193s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/local_setup.dsv
+[13.193s] -- Installing: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/package.dsv
+[13.194s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/ament_index/resource_index/packages/fake_camera_driver
+[13.195s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/cmake/fake_camera_driverConfig.cmake
+[13.196s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/cmake/fake_camera_driverConfig-version.cmake
+[13.197s] -- Up-to-date: /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/install/fake_camera_driver/share/fake_camera_driver/package.xml
+[13.198s] Invoked command in '/home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver
