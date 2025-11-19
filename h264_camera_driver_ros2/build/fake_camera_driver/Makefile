@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2
+CMAKE_SOURCE_DIR = /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver
+CMAKE_BINARY_DIR = /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/CMakeFiles /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/CMakeFiles /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2
+CMAKE_SOURCE_DIR = /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver
+CMAKE_BINARY_DIR = /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver
 
 # Utility rule file for fake_camera_driver_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/fake_camera_driver_uninstall.dir/compiler_depend.make
 include CMakeFiles/fake_camera_driver_uninstall.dir/progress.make
 
 CMakeFiles/fake_camera_driver_uninstall:
-	/usr/bin/cmake -P /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 fake_camera_driver_uninstall: CMakeFiles/fake_camera_driver_uninstall
 fake_camera_driver_uninstall: CMakeFiles/fake_camera_driver_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/fake_camera_driver_uninstall.dir/clean:
 .PHONY : CMakeFiles/fake_camera_driver_uninstall.dir/clean
 
 CMakeFiles/fake_camera_driver_uninstall.dir/depend:
-	cd /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2 /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2 /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver /home/bx-orin/cam_driver_ws/DEV/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/CMakeFiles/fake_camera_driver_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2 /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2 /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver /home/bx-orin/cam_driver_ws/ros2_camera_driver/h264_camera_driver_ros2/build/fake_camera_driver/CMakeFiles/fake_camera_driver_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fake_camera_driver_uninstall.dir/depend
 
