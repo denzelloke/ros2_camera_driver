@@ -1,88 +1,143 @@
-#include <chrono>
-#include <opencv2/opencv.hpp>
+// Example: Fake Camera Node using CameraFeedWrapper
+// This demonstrates how to use the wrapper with test patterns
+// Later, replace this with your real IMX678 camera capture code!
+
+#include <h264_camera_driver_ros2/core/CameraFeedWrapper_ros2.h>
 #include <rclcpp/rclcpp.hpp>
-#include <sensor_msgs/msg/compressed_image.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
 
-class FakeCameraNode : public rclcpp::Node {
+/**
+ * @brief A simple fake camera that generates test patterns
+ *
+ * This inherits from CameraFeedWrapper and implements captureAndPublishOnce()
+ * to generate and publish test images.
+ */
+class FakeCameraNode : public CameraFeedWrapper {
 public:
-    FakeCameraNode() : Node("fake_camera_node"), frame_count_(0) {
-        // Create publisher
-        publisher_ = this->create_publisher<sensor_msgs::msg::CompressedImage>("camera/image/compressed", 10);
-
-        // Create timer - 30 FPS = publish every 33ms
-        timer_ = this->create_wall_timer(
-                std::chrono::milliseconds(33),
-                std::bind(&FakeCameraNode::timer_callback, this));
-
-        RCLCPP_INFO(this->get_logger(), "Fake camera node started!");
+    FakeCameraNode(std::shared_ptr<rclcpp::Node> node,
+                   const std::string& frame_id,
+                   const std::string& topic_prefix,
+                   int width = 640,
+                   int height = 480)
+        : CameraFeedWrapper(node, frame_id, topic_prefix)
+        , width_(width)
+        , height_(height)
+        , frame_count_(0)
+    {
+        RCLCPP_INFO(node_->get_logger(), "Fake Camera Node created (%dx%d)", width_, height_);
+        // NO DMA buffer needed for fake camera!
     }
 
-private:
-    void timer_callback() {
-        // Create a simple test image (640x480, blue-green gradient)
-        cv::Mat image(480, 640, CV_8UC3);
+    void captureAndPublishOnce() override {
+        cv::Mat test_image = generateTestPattern();
 
-        // Fill with gradient + moving rectangle
-        for (int y = 0; y < 480; y++) {
-            for (int x = 0; x < 640; x++) {
-                // Blue-green gradient (underwater-ish)
-                image.at<cv::Vec3b>(y, x) = cv::Vec3b(
-                        200 - y / 3,  // Blue
-                        100 + y / 4,  // Green
-                        50);
-            }
-        }
+        // Publish directly - no DMA buffer conversion
+        publishCvImage(test_image, "bgr8");
 
-        // Add moving rectangle so we can see it's alive
-        int rect_x = (frame_count_ * 5) % 640;
-        cv::rectangle(
-                image,
-                cv::Point(rect_x, 200),
-                cv::Point(rect_x + 50, 280),
-                cv::Scalar(0, 255, 255),  // Yellow
-                -1);
-
-        // Add frame counter text
-        cv::putText(
-                image,
-                "Frame: " + std::to_string(frame_count_),
-                cv::Point(10, 30),
-                cv::FONT_HERSHEY_SIMPLEX,
-                1.0,
-                cv::Scalar(255, 255, 255),
-                2);
-        
-        // encode image
-        std::vector<uchar> buffer;
-        std::vector<int> params = {cv::IMWRITE_JPEG_QUALITY, 90};  // 90% quality
-        cv::imencode(".jpg", image, buffer, params);
-
-        // create ROS message
-        auto msg = std::make_shared<sensor_msgs::msg::CompressedImage>();
-        msg->header.stamp = this->now();
-        msg->header.frame_id = "camera";
-        msg->format = "jpeg";
-        msg->data = buffer;
-
-        // Publish
-        publisher_->publish(*msg);
-
-        // Log every 30 frames (once per second)
-        if (frame_count_ % 30 == 0) {
-            RCLCPP_INFO(this->get_logger(), "Published frame %d", frame_count_);
+        // Compress and publish
+        std::vector<uint8_t> jpeg_buffer;
+        std::vector<int> params = {cv::IMWRITE_JPEG_QUALITY, 80};
+        if (cv::imencode(".jpg", test_image, jpeg_buffer, params)) {
+            compressed_image_msg_.header.stamp = node_->now();
+            compressed_image_msg_.data = jpeg_buffer;
+            pub_compressed_image_->publish(compressed_image_msg_);
         }
 
         frame_count_++;
     }
 
-    rclcpp::Publisher<sensor_msgs::msg::CompressedImage>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
+private:
+    cv::Mat generateTestPattern() {
+        cv::Mat img(height_, width_, CV_8UC3);
+
+        for (int y = 0; y < height_; y++) {
+            for (int x = 0; x < width_; x++) {
+                int val = (x + y + frame_count_ * 2) % 255;
+                img.at<cv::Vec3b>(y, x) = cv::Vec3b(
+                    val,
+                    (val + 85) % 255,
+                    (val + 170) % 255
+                );
+            }
+        }
+
+        // Skip putText - can cause issues
+        return img;
+    }
+
+    int width_;
+    int height_;
     int frame_count_;
+    // Removed dma_buf_fd_ - not needed!
 };
 
-int main(int argc, char **argv) {
+// ========================================
+// Main Function
+// ========================================
+
+int main(int argc, char** argv) {
+    // Initialize ROS2
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<FakeCameraNode>());
+
+    // Create the ROS2 node
+    auto node = std::make_shared<rclcpp::Node>("fake_camera_node");
+
+    RCLCPP_INFO(node->get_logger(), "========================================");
+    RCLCPP_INFO(node->get_logger(), "Starting Fake Camera Node");
+    RCLCPP_INFO(node->get_logger(), "========================================");
+
+    // Get parameters (you can set these with ros2 run or launch files)
+    node->declare_parameter("frame_id", "camera");
+    node->declare_parameter("topic_prefix", "/camera");
+    node->declare_parameter("width", 640);
+    node->declare_parameter("height", 480);
+    node->declare_parameter("fps", 30);
+
+    std::string frame_id = node->get_parameter("frame_id").as_string();
+    std::string topic_prefix = node->get_parameter("topic_prefix").as_string();
+    int width = node->get_parameter("width").as_int();
+    int height = node->get_parameter("height").as_int();
+    int fps = node->get_parameter("fps").as_int();
+
+    RCLCPP_INFO(node->get_logger(), "Configuration:");
+    RCLCPP_INFO(node->get_logger(), "  Frame ID: %s", frame_id.c_str());
+    RCLCPP_INFO(node->get_logger(), "  Topic Prefix: %s", topic_prefix.c_str());
+    RCLCPP_INFO(node->get_logger(), "  Resolution: %dx%d", width, height);
+    RCLCPP_INFO(node->get_logger(), "  Target FPS: %d", fps);
+
+    try {
+        // Create the fake camera
+        auto camera = std::make_shared<FakeCameraNode>(node, frame_id, topic_prefix, width, height);
+
+        // Create a timer to call captureAndPublishOnce() at regular intervals
+        auto timer_period = std::chrono::milliseconds(1000 / fps);  // Convert FPS to period
+        auto timer = node->create_wall_timer(
+            timer_period,
+            [camera]() {
+                camera->captureAndPublishOnce();
+            }
+        );
+
+        RCLCPP_INFO(node->get_logger(), "Fake camera running! Press Ctrl+C to stop.");
+        RCLCPP_INFO(node->get_logger(), "...");
+        RCLCPP_INFO(node->get_logger(), "To view the images:");
+        RCLCPP_INFO(node->get_logger(), "  ros2 run rqt_image_view rqt_image_view");
+        RCLCPP_INFO(node->get_logger(), "Or run the test script:");
+        RCLCPP_INFO(node->get_logger(), "  python3 test_camera_feed.py --prefix %s", topic_prefix.c_str());
+        RCLCPP_INFO(node->get_logger(), "...");
+
+        // Spin - keeps the node running and timer firing
+        rclcpp::spin(node);
+
+    } catch (const std::exception& e) {
+        RCLCPP_ERROR(node->get_logger(), "Exception: %s", e.what());
+        rclcpp::shutdown();
+        return 1;
+    }
+
+    // Cleanup
+    RCLCPP_INFO(node->get_logger(), "Shutting down fake camera node...");
     rclcpp::shutdown();
     return 0;
 }
